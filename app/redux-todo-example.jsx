@@ -22,7 +22,15 @@ var reducer = (state = stateDefault, action) => { //create a default argument in
     }
 }
 
-var store = redux.createStore(reducer); //create the state using the reducer, so the state that gets passed in doesn't get modified
+var store = redux.createStore(reducer, redux.compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+)); //create the state using the reducer, so the state that gets passed in doesn't get modified
+
+//subscribe to changes
+var unsubscribe = store.subscribe(()=> {
+    var state = store.getState();
+    document.getElementById('app').innerHTML = state.searchText;
+})
 
 console.log("Current state", store.getState());  //returns the STATE from the app, which is the Global Store (or global state)
 
@@ -32,4 +40,13 @@ var changeSearchText = {
 }
 
 store.dispatch(changeSearchText);
-console.log("New search text", store.getState());
+
+store.dispatch({
+    type: 'CHANGE_SEARCH_TEXT',
+    searchText: 'dog'
+})
+
+store.dispatch({
+    type: 'CHANGE_SEARCH_TEXT',
+    searchText: 'last one'
+})
