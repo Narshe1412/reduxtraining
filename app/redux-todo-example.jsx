@@ -38,7 +38,6 @@ var changeSearchText = {
     type: 'CHANGE_SEARCH_TEXT',
     searchText: 'new text'
 }
-
 store.dispatch(changeSearchText);
 
 store.dispatch({
