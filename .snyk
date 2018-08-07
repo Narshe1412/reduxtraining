@@ -15,6 +15,17 @@ patch:
         patched: '2018-08-04T08:18:00.069Z'
     - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
         patched: '2018-08-04T08:18:00.069Z'
+    - karma > log4js > loggly > request > hawk > hoek:
+        patched: '2018-08-07T10:49:12.343Z'
+    - karma > log4js > loggly > request > hawk > boom > hoek:
+        patched: '2018-08-07T10:49:12.343Z'
+    - karma > log4js > loggly > request > hawk > sntp > hoek:
+        patched: '2018-08-07T10:49:12.343Z'
+    - karma > log4js > loggly > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-08-07T10:49:12.343Z'
   'npm:ms:20170412':
     - karma > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
         patched: '2018-08-04T08:18:00.069Z'
+  'npm:tunnel-agent:20170305':
+    - karma > log4js > loggly > request > tunnel-agent:
+        patched: '2018-08-07T10:49:12.343Z'
