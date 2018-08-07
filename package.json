@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Andrew Mead",
   "license": "MIT",
@@ -14,8 +16,11 @@
     "express": "^4.13.4",
     "react": "^0.14.7",
     "react-addons-test-utils": "^0.14.7",
-    "react-dom": "^16.0.1",
-    "react-router": "^2.0.0"
+
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0",
+    "snyk": "^1.90.0"
+
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -25,21 +30,22 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "expect": "^1.14.0",
-    "foundation-sites": "6.2.0",
+    "foundation-sites": "6.3.1",
     "jquery": "^3.0.0",
-    "karma": "^0.13.22",
+    "karma": "^2.0.3",
     "karma-chrome-launcher": "^0.2.2",
     "karma-mocha": "^0.2.2",
     "karma-mocha-reporter": "^2.0.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
+    "karma-webpack": "^2.0.10",
+    "mocha": "^4.0.0",
     "node-sass": "^3.4.2",
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1",
     "sass-loader": "^3.1.2",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13"
-  }
+    "webpack": "^2.2.0"
+  },
+  "snyk": true
 }
